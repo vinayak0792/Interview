@@ -30,7 +30,7 @@ public class Solution {
 			for (int i = 0; i < size; i++) {
 				TreeNode node = queue.poll();
 				nodeList.append(node.val);
-				if (node.val == 0)
+				if (node.val == 0 || (node.left == null && node.right == null))
 					continue;
 				if (node.left != null) {
 					queue.offer(node.left);
